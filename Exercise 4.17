@@ -1,0 +1,56 @@
+      import java.util.Scanner;
+      public class DaysofMonths {
+	
+	
+	    public static void main(String[] args) {
+			
+		  
+		Scanner input = new Scanner(System.in);
+		
+		
+		System.out.print("Enter a year: ");
+		int year = input.nextInt();
+		input.nextLine();
+		
+
+		 System.out.print("Enter a month: ");
+		 String month = input.next().toUpperCase();
+		 
+		    
+		 int days  = 0;
+		    
+		 Boolean isLeapYear = ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+
+    
+		 if (month.equals("JAN")) {
+
+             days = 31;
+          }  
+
+         else if (month.equals("FEB")) {
+            days = 28;
+            
+            if (isLeapYear) {
+    		    days = 29;
+    	  } 
+    		    
+    		    else {
+    		    days = 28; 
+    		    
+    	    }
+
+         }      
+
+         else if (month.equals("MAR"))
+        	 days = 30;
+    	 
+    
+          System.out.println(month + " has " + days + " days");
+
+		     		                      
+		                            	 
+		    
+	}
+
+ }
+
